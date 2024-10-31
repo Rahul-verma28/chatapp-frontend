@@ -4,7 +4,7 @@ import NewDM from './components/new-dm';
 import { apiClient } from '@/lib/api-client';
 import { GET_DM_CONTACTS_ROUTES } from '@/utils/constants';
 import { useAppStore } from '@/store';
-import ContactsList from '@/components/contactsList';
+import ContactsList from '@/components/ContactsList';
 
 const ConatactContainer = () => {
 
