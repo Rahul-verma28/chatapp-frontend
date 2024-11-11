@@ -24,17 +24,15 @@ const ConatactContainer = () => {
 
   return (
     <div className='relative h-[100vh] md:w-[35vw] lg:w-[30vw] xl:w-[25vw] bg-black border-r-2 border-gray-300 w-full'>
-      <div className="my-5">
-        <div className="flex items-center justify-between px-4">
-          <h6 className="flex justify-center items-center  uppercase tracking-widest text-neutral300 font-bold text-opacity-90 text-md">
-            <img src="/icon.webp" alt="logo" height={50} width={50}/>
-            <span>FlowChat</span>
-          </h6>
-          <NewDM />
-        </div>
-        <div >
-          <ContactsList contacts={directMessagesContacts} />
-        </div>
+      <div className="flex items-center justify-between px-4 my-5">
+        <h6 className="flex justify-center items-center  uppercase tracking-widest text-neutral300 font-bold text-opacity-90 text-md">
+          <img src="/icon.webp" alt="logo" height={50} width={50} />
+          <span>FlowChat</span>
+        </h6>
+        <NewDM />
+      </div>
+      <div >
+        <ContactsList contacts={directMessagesContacts} />
       </div>
       <ProfileInfo />
     </div>

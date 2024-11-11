@@ -7,7 +7,6 @@ import { toast } from "sonner";
 import EmptyChatContainer from "./components/empty-chat-container";
 import Chatcontaier from "./components/chat-container";
 import ConatactContainer from "./components/contact-container";
-import { HOST } from "@/utils/constants";
 
 const Chat = () => {
 
