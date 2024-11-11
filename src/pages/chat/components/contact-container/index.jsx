@@ -24,13 +24,11 @@ const ConatactContainer = () => {
 
   return (
     <div className='relative md:w-[35vw] lg:w-[30vw] xl:w-[25vw] bg-black border-r-2 border-gray-300 w-full'>
-      {/* <div className="p-3 text-2xl font-semibold">
-        FlowChat
-      </div> */}
       <div className="my-5">
-        <div className="flex items-center justify-between px-6">
-          <h6 className="uppercase tracking-widest text-neutral300 font-bold text-opacity-90 text-md">
-            FlowChat
+        <div className="flex items-center justify-between px-4">
+          <h6 className="flex justify-center items-center  uppercase tracking-widest text-neutral300 font-bold text-opacity-90 text-md">
+            <img src="/icon.webp" alt="logo" height={50} width={50}/>
+            <span>FlowChat</span>
           </h6>
           <NewDM />
         </div>
@@ -38,24 +36,9 @@ const ConatactContainer = () => {
           <ContactsList contacts={directMessagesContacts} />
         </div>
       </div>
-      {/* <div className="my-5">
-        <div className="flex items-center justify-between px-6 ">
-          <Title text="Channels" />
-          <NewDM />
-        </div>
-      </div> */}
       <ProfileInfo />
     </div>
   )
 }
 
 export default ConatactContainer
-
-
-const Title = ({ text }) => {
-  return (
-    <h6 className="uppercase tracking-widest text-neutral300 font-bold text-opacity-90 text-md">
-      {text}
-    </h6>
-  );
-};

@@ -17,7 +17,7 @@ const ContactsList = ({ contacts, isChannel }) => {
   };
 
   return (
-    <div className="mt-5">
+    <div className=" mt-5 overflow-y-auto scrollbar-hidden">
       {contacts.map((contact) => (
         <div
           key={contact._id}
@@ -47,7 +47,7 @@ const ContactsList = ({ contacts, isChannel }) => {
                 </Avatar>
                 <div className="flex flex-col">
                   <span>
-                    {contact.firstName ? `${contact.firstName} ${contact.lastName}` : contact.email}
+                    {contact.firstName ? contact.firstName : contact.email}
                   </span>
                   {/* <span className="text-xs">{contact.email}</span> */}
                 </div>

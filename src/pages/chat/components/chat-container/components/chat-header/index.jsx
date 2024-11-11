@@ -8,7 +8,7 @@ const ChatHeader = () => {
     const { closeChat, selectedChatType, selectedChatData } = useAppStore();
 
     return (
-        <div className='h-[12vh] flex items-center justify-between bg-gray-900 border-b-2 border-[#2f303b] px-6 w-full'>
+        <div className='h-[5rem] flex items-center justify-between bg-gray-900 border-b-2 border-[#2f303b] px-6 w-full'>
             <div className="flex justify-between items-center w-full">
                 <div className="flex gap-3 items-center">
                     <Avatar className="h-12 w-12 rounded-full overflow-hidden">
