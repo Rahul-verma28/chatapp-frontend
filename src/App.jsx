@@ -3,7 +3,6 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Profile from './pages/profile';
 import Auth from './pages/auth';
 import Chat from './pages/chat';
-import NotFound from './pages/NotFound';
 import { useAppStore } from './store';
 import { apiClient } from './lib/api-client';
 import { GET_USER_INFO } from './utils/constants';
@@ -52,11 +51,14 @@ const App = () => {
   }, [userInfo, setUserInfo]);
 
   if (loading) {
-    return <div>Loading....</div>;
+    return <div className='h-screen flex justify-center items-center font-bold text-white'>Loading....</div>;
   }
 
   if (error) {
-    return <Navigate to="/not-found" />;
+    return <>
+      setError(false)
+      <Navigate to="/auth" />
+    </>
   }
 
   return (
@@ -77,7 +79,6 @@ const App = () => {
             <Profile />
           </PrivateRoute>
         } />
-        <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/auth" />} />
       </Routes>
     </BrowserRouter>
