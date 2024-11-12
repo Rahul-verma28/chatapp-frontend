@@ -55,10 +55,8 @@ const App = () => {
   }
 
   if (error) {
-    return <>
-      setError(false)
-      <Navigate to="/auth" />
-    </>
+    setError(false)
+    return <Navigate to="/auth" />;
   }
 
   return (
