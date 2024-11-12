@@ -6,6 +6,7 @@ import Chat from './pages/chat';
 import { useAppStore } from './store';
 import { apiClient } from './lib/api-client';
 import { GET_USER_INFO } from './utils/constants';
+import NotFound from './pages/NotFound';
 
 const PrivateRoute = ({ children }) => {
   const { userInfo } = useAppStore();
@@ -56,12 +57,13 @@ const App = () => {
 
   if (error) {
     setError(false)
-    return <Navigate to="/auth" />;
+    return <Navigate to="/not-found" />;
   }
 
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Navigate to="/auth" />} />
         <Route path="/auth" element={
           <AuthRoute>
             <Auth />
@@ -77,7 +79,7 @@ const App = () => {
             <Profile />
           </PrivateRoute>
         } />
-        <Route path="*" element={<Navigate to="/auth" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
