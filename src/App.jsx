@@ -79,7 +79,8 @@ const App = () => {
             <Profile />
           </PrivateRoute>
         } />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/not-found" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/not-found" />} />
       </Routes>
     </BrowserRouter>
   );
