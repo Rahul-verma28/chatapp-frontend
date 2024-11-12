@@ -19,7 +19,7 @@ const ContactsList = ({ contacts, isChannel }) => {
   };
 
   return (
-    <div className="mt-5 overflow-y-auto scrollbar-hidden">
+    <div className="mt-5 max-h-[80vh] overflow-y-auto scrollbar-hidden">
       <div className='md:hidden'>
         {contacts.length == 0 && (
           <div className=' md:bg-black flex flex-col items-center justify-center duration-1000 transition-all'>

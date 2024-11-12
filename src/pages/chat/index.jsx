@@ -20,12 +20,10 @@ const Chat = () => {
     }
   }, [userInfo, navigate]);
 
-  return <>
-    <div className="flex h-screen text-white overflow-hidden max-w-[100vw] max-h-screen">
+  return <div className="flex text-white overflow-hidden max-w-[100vw]">
       <ConatactContainer />
       {selectedChatType === undefined ?
         <EmptyChatContainer /> : <Chatcontaier />}
     </div>
-  </>;
 };
 export default Chat;
