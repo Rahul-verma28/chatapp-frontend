@@ -86,7 +86,7 @@ const MessageBar = () => {
     }
 
     return (
-        <div className='w-full flex justify-center items-center p-2 gap-2'>
+        <div className='w-full flex justify-center items-center p-2 gap-2 mb-12 sm:mb-0'>
             <div className='flex-1 flex bg-gray-900 rounded-md items-center gap-5 pr-5'>
                 <input type="text"
                     placeholder='Enter message here..'

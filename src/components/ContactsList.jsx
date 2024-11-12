@@ -20,9 +20,9 @@ const ContactsList = ({ contacts, isChannel }) => {
 
   return (
     <div className="mt-5 overflow-y-auto scrollbar-hidden">
-      <div className='sm:hidden'>
-        {!contacts && (
-          <div className='flex-1 md:bg-black flex flex-col items-center justify-center duration-1000 transition-all'>
+      <div className='md:hidden'>
+        {contacts.length == 0 && (
+          <div className=' md:bg-black flex flex-col items-center justify-center duration-1000 transition-all'>
             <Lottie
               isClickToPauseDisabled={true}
               height={200}

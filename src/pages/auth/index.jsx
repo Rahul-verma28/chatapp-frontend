@@ -90,11 +90,11 @@ const Auth = () => {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] flex items-center justify-center px-10">
-      <div className="h-auto w-auto bg-white text-opacity-90 shadow-2xl rounded-3xl grid xl:grid-cols-2 p-5">
+    <div className="h-screen w-[100vw] flex items-center justify-center px-8 bg-white">
+      <div className="h-auto w-auto bg-white text-opacity-90 shadow-2xl rounded-3xl grid xl:grid-cols-2 p-5 pb-8">
         <div className="flex flex-col gap-2 items-center justify-center">
           <div className="flex items-center justify-center flex-col">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center text-center">
               <h1 className="text-5xl font-bold md:text-6x1">Welcome</h1>
               <img src={Victory} alt="Victory Emoji" className="h-[100px]" />
             </div>
